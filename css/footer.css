@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Footer Section Stylesheet — Isolated, no conflicts with other sections
+   ========================================================================== */
+
+.site-footer {
+  width: 100%;
+  margin-top: 40px;
+  background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
+  padding: 40px 0 0; /* bottom padding handled by copyright bar */
+  box-sizing: border-box;
+}
+
+.site-footer__container {
+  width: 100%;
+  max-width: 1406px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ── Logo ── */
+.site-footer__logo-link {
+  flex-shrink: 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.site-footer__logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Column shared base ── */
+.site-footer__col {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+/* ── Location-pin icon box ── */
+.site-footer__icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.site-footer__icon-box svg {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  stroke: currentColor;
+}
+
+/* ── Column text block ── */
+.site-footer__col-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Office / Section heading ── */
+.site-footer__col-heading {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700', 'Outfit', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ── Address / detail text ── */
+.site-footer__col-text {
+  font-family: 'Open Sans', 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.80);
+  margin: 0;
+}
+
+/* ── Phone numbers ── */
+.site-footer__phone {
+  font-family: 'Open Sans', 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.80);
+  text-decoration: none;
+  display: block;
+}
+
+.site-footer__phone:hover {
+  color: #ffffff;
+}
+
+/* ── Phone icon box ── */
+.site-footer__icon-box--phone {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Social media column ── */
+.site-footer__social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.site-footer__social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.site-footer__social-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.site-footer__social-link svg {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .site-footer__container {
+    gap: 28px;
+  }
+  .site-footer__logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 0;
+  }
+  .site-footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 0 24px;
+  }
+  .site-footer__col {
+    flex: none;
+    width: 100%;
+  }
+  .site-footer__col-heading {
+    font-size: 18px;
+  }
+  .site-footer__col-text,
+  .site-footer__phone {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer__container {
+    padding: 0 16px;
+  }
+  .site-footer__col-heading {
+    font-size: 16px;
+  }
+  .site-footer__col-text,
+  .site-footer__phone {
+    font-size: 14px;
+  }
+}
+
+/* ── Copyright bar ── */
+.site-footer__copyright-bar {
+  width: 100%;
+  margin-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 40px;
+  box-sizing: border-box;
+}
+
+.site-footer__copyright-text {
+  font-family: 'FONTSPRING DEMO - Museo Sans 500', 'Outfit', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .site-footer__copyright-bar {
+    padding: 16px 24px;
+    margin-top: 24px;
+  }
+  .site-footer__copyright-text {
+    font-size: 14px;
+  }
+}
