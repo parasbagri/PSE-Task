@@ -1,0 +1,192 @@
+/* ==========================================================================
+   What Makes This Exhibition a Must-Visit Stylesheet
+   ========================================================================== */
+
+.must-visit {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 767px;
+  margin: 0 auto;
+  padding: 80px 0 120px;
+  background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
+  box-sizing: border-box;
+  border-bottom-left-radius: 50% 120px;
+  border-bottom-right-radius: 50% 120px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.must-visit__title {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700', 'Outfit', var(--font-heading);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.must-visit__carousel {
+  position: relative;
+  width: 100%;
+}
+
+.must-visit__grid {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 20px max(40px, calc((100vw - 1406px) / 2)) 40px;
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+}
+
+.must-visit__grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.must-visit__card {
+  width: 320px;
+  height: 330px;
+  background-color: #EADBFC;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.must-visit__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.must-visit__card-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.must-visit__card-title {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700', 'Outfit', var(--font-heading);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #000E38;
+  margin: 0;
+}
+
+.must-visit__card-desc {
+  font-family: 'Open Sans', 'Inter', var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3F186A;
+  margin: 0;
+}
+
+.must-visit__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.must-visit__control-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.must-visit__control-btn--left {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.must-visit__control-btn--left:hover {
+  background-color: #ffffff;
+  color: #3F186A;
+}
+
+.must-visit__control-btn--right {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #3F186A;
+}
+
+.must-visit__control-btn--right:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .must-visit__title {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .must-visit {
+    padding: 60px 0 100px;
+    border-bottom-left-radius: 50% 60px;
+    border-bottom-right-radius: 50% 60px;
+  }
+
+  .must-visit__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .must-visit__card {
+    width: 290px;
+    height: 310px;
+    padding: 30px 24px;
+  }
+
+  .must-visit__card-title {
+    font-size: 20px;
+  }
+
+  .must-visit__card-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .must-visit__title {
+    font-size: 26px;
+  }
+
+  .must-visit__card {
+    width: 270px;
+    height: 300px;
+    padding: 24px 20px;
+  }
+}

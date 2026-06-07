@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/logos.css?v=2">
   <link rel="stylesheet" href="css/choose-school.css?v=2">
   <link rel="stylesheet" href="css/pre-schedule.css?v=1">
+  <link rel="stylesheet" href="css/must-visit.css?v=1">
 </head>
 
 <body>
@@ -477,7 +478,101 @@
       </div>
       
     </section>
+
+    <!-- What Makes This Exhibition a Must-Visit Section -->
+    <section class="must-visit" aria-labelledby="must-visit-title">
+      <h2 id="must-visit-title" class="must-visit__title">What Makes This Exhibition a Must-Visit</h2>
+      
+      <div class="must-visit__carousel">
+        <div class="must-visit__grid" id="must-visit-grid">
+          
+          <!-- Card 1 -->
+          <div class="must-visit__card" tabindex="0">
+            <img src="assets/icons/iconMan.png" alt="School Heads Icon" class="must-visit__card-icon">
+            <h3 class="must-visit__card-title">Interact Directly with School Heads</h3>
+            <p class="must-visit__card-desc">Get answers straight from the experts</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="must-visit__card" tabindex="0">
+            <img src="assets/icons/iconNote.png" alt="Curriculum Icon" class="must-visit__card-icon">
+            <h3 class="must-visit__card-title">Compare Curriculum & Pedagogy</h3>
+            <p class="must-visit__card-desc">Understand the differences between CBSE, ICSE, IB, Cambridge, Finnish & more</p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="must-visit__card" tabindex="0">
+            <img src="assets/icons/iconper.png" alt="Fee Structure Icon" class="must-visit__card-icon">
+            <h3 class="must-visit__card-title">Get Exclusive Fee Structures & Offers</h3>
+            <p class="must-visit__card-desc">Access transparent information and avail offers</p>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="must-visit__card" tabindex="0">
+            <img src="assets/icons/fi_1989875.png" alt="Offerings Icon" class="must-visit__card-icon">
+            <h3 class="must-visit__card-title">Explore Schools Offerings</h3>
+            <p class="must-visit__card-desc">Preview infrastructure, co-curricular, teaching methodology and culture</p>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="must-visit__card" tabindex="0">
+            <img src="assets/icons/Teacher.png" alt="Counselling Icon" class="must-visit__card-icon">
+            <h3 class="must-visit__card-title">On-the-spot Counselling</h3>
+            <p class="must-visit__card-desc">Save time by getting direct support with your school search, applications, and immediate admission guidance</p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Slider Controls -->
+      <div class="must-visit__controls">
+        <button class="must-visit__control-btn must-visit__control-btn--left" id="mv-btn-left" aria-label="Previous items">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <button class="must-visit__control-btn must-visit__control-btn--right" id="mv-btn-right" aria-label="Next items">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+      
+    </section>
   </main>
+
+  <!-- Carousel Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('must-visit-grid');
+      const leftBtn = document.getElementById('mv-btn-left');
+      const rightBtn = document.getElementById('mv-btn-right');
+      
+      if (grid && leftBtn && rightBtn) {
+        const getScrollAmount = () => {
+          // Dynamic scroll width: Card width (320px) + gap (30px) on desktop
+          const card = grid.querySelector('.must-visit__card');
+          if (card) {
+            const style = window.getComputedStyle(card);
+            const cardWidth = card.offsetWidth;
+            const gap = parseInt(window.getComputedStyle(grid).gap) || 30;
+            return cardWidth + gap;
+          }
+          return 350;
+        };
+        
+        leftBtn.addEventListener('click', () => {
+          grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+        
+        rightBtn.addEventListener('click', () => {
+          grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
 
 </body>
 
