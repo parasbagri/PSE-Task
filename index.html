@@ -15,12 +15,15 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Outfit:wght@600;700;800;900&display=swap"
     rel="stylesheet">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="index.css?v=4">
   <link rel="stylesheet" href="css/logos.css?v=2">
   <link rel="stylesheet" href="css/choose-school.css?v=2">
   <link rel="stylesheet" href="css/pre-schedule.css?v=1">
-  <link rel="stylesheet" href="css/must-visit.css?v=1">
+  <link rel="stylesheet" href="css/must-visit.css?v=2">
 </head>
 
 <body>
@@ -332,9 +335,9 @@
     <!-- Participating Schools Logos Section -->
     <section class="logos" aria-labelledby="logos-title">
       <h2 id="logos-title" class="logos__title">Participating Schools</h2>
-      
+
       <div class="logos__marquee-wrapper">
-        
+
         <!-- Top Row: Right to Left (moving left) -->
         <div class="logos__marquee" tabindex="0" aria-label="Participating Schools Row 1">
           <div class="logos__track logos__track--left">
@@ -364,7 +367,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Bottom Row: Left to Right (moving right) -->
         <div class="logos__marquee" tabindex="0" aria-label="Participating Schools Row 2">
           <div class="logos__track logos__track--right">
@@ -394,72 +397,77 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
 
     <!-- Choose the School That Fits You Best Section -->
     <section class="choose-school" aria-labelledby="choose-school-title">
       <h2 id="choose-school-title" class="choose-school__title">Choose the School That Fits You Best</h2>
-      
+
       <div class="choose-school__grid">
-        
+
         <!-- Card 1 -->
         <div class="choose-school__card" tabindex="0">
-          <img src="assets/choose-the-school/s1.png" alt="Pre-Schools & Early Learning Centres" class="choose-school__img">
+          <img src="assets/choose-the-school/s1.png" alt="Pre-Schools & Early Learning Centres"
+            class="choose-school__img">
           <div class="choose-school__overlay">
             <h3 class="choose-school__card-title">Pre-Schools & Early Learning Centres</h3>
             <p class="choose-school__card-desc">Nurturing foundational skills for toddlers and pre-primary children.</p>
           </div>
         </div>
-        
+
         <!-- Card 2 -->
         <div class="choose-school__card" tabindex="0">
           <img src="assets/choose-the-school/s2.png" alt="K-12 CBSE Day Schools" class="choose-school__img">
           <div class="choose-school__overlay">
             <h3 class="choose-school__card-title">K-12 CBSE Day Schools</h3>
-            <p class="choose-school__card-desc">Reputed schools offering complete schooling from Kindergarten to Grade 12.</p>
+            <p class="choose-school__card-desc">Reputed schools offering complete schooling from Kindergarten to Grade
+              12.</p>
           </div>
         </div>
-        
+
         <!-- Card 3 -->
         <div class="choose-school__card" tabindex="0">
           <img src="assets/choose-the-school/s3.png" alt="Heritage to New-Age Schools" class="choose-school__img">
           <div class="choose-school__overlay">
             <h3 class="choose-school__card-title">Heritage to New-Age Schools</h3>
-            <p class="choose-school__card-desc">Time-tested schools to innovative pedagogy, tech enabled, future-ready schools</p>
+            <p class="choose-school__card-desc">Time-tested schools to innovative pedagogy, tech enabled, future-ready
+              schools</p>
           </div>
         </div>
-        
+
         <!-- Card 4 -->
         <div class="choose-school__card" tabindex="0">
           <img src="assets/choose-the-school/s4.png" alt="International Curriculum Schools" class="choose-school__img">
           <div class="choose-school__overlay">
             <h3 class="choose-school__card-title">International Curriculum Schools</h3>
-            <p class="choose-school__card-desc">Offering IB, Cambridge, Finnish and other global curricula with a global learning environment.</p>
+            <p class="choose-school__card-desc">Offering IB, Cambridge, Finnish and other global curricula with a global
+              learning environment.</p>
           </div>
         </div>
-        
+
       </div>
     </section>
 
     <!-- Pre-schedule Appointments Section -->
     <section class="pre-schedule" aria-label="Pre-schedule School Appointments">
-      
+
       <!-- Left Content Column -->
       <div class="pre-schedule__left">
         <div class="pre-schedule__content">
           <span class="pre-schedule__tagline">Exciting Opportunities for Parents!</span>
-          
+
           <h2 class="pre-schedule__title">Pre-schedule Your<br>School Appointments</h2>
-          
+
           <p class="pre-schedule__subtext">To Avoid Rush</p>
-          
+
           <div class="pre-schedule__btn-wrapper">
             <a href="#register" class="pre-schedule__btn" aria-label="Pre-schedule Appointments Now">
               <!-- Arrow box: 60x60px -->
               <span class="pre-schedule__btn-icon-box">
-                <svg class="pre-schedule__btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="pre-schedule__btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -470,108 +478,162 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Right Image Column -->
       <div class="pre-schedule__right">
-        <img src="assets/rightimage.jpg" alt="Parents consulting with school admission officials at the exhibition" class="pre-schedule__img">
+        <img src="assets/rightimage.jpg" alt="Parents consulting with school admission officials at the exhibition"
+          class="pre-schedule__img">
         <div class="pre-schedule__fade-overlay"></div>
       </div>
-      
+
     </section>
 
     <!-- What Makes This Exhibition a Must-Visit Section -->
     <section class="must-visit" aria-labelledby="must-visit-title">
       <h2 id="must-visit-title" class="must-visit__title">What Makes This Exhibition a Must-Visit</h2>
-      
-      <div class="must-visit__carousel">
-        <div class="must-visit__grid" id="must-visit-grid">
-          
+
+      <!-- Swiper Container -->
+      <div class="must-visit__carousel swiper">
+        <!-- Swiper Wrapper -->
+        <div class="must-visit__grid swiper-wrapper" id="must-visit-grid">
+
           <!-- Card 1 -->
-          <div class="must-visit__card" tabindex="0">
+          <div class="must-visit__card swiper-slide" tabindex="0">
             <img src="assets/icons/iconMan.png" alt="School Heads Icon" class="must-visit__card-icon">
             <h3 class="must-visit__card-title">Interact Directly with School Heads</h3>
             <p class="must-visit__card-desc">Get answers straight from the experts</p>
           </div>
-          
+
           <!-- Card 2 -->
-          <div class="must-visit__card" tabindex="0">
+          <div class="must-visit__card swiper-slide" tabindex="0">
             <img src="assets/icons/iconNote.png" alt="Curriculum Icon" class="must-visit__card-icon">
-            <h3 class="must-visit__card-title">Compare Curriculum & Pedagogy</h3>
-            <p class="must-visit__card-desc">Understand the differences between CBSE, ICSE, IB, Cambridge, Finnish & more</p>
+            <h3 class="must-visit__card-title">Compare Curriculum &amp; Pedagogy</h3>
+            <p class="must-visit__card-desc">Understand the differences between CBSE, ICSE, IB, Cambridge, Finnish &amp;
+              more</p>
           </div>
-          
+
           <!-- Card 3 -->
-          <div class="must-visit__card" tabindex="0">
+          <div class="must-visit__card swiper-slide" tabindex="0">
             <img src="assets/icons/iconper.png" alt="Fee Structure Icon" class="must-visit__card-icon">
-            <h3 class="must-visit__card-title">Get Exclusive Fee Structures & Offers</h3>
+            <h3 class="must-visit__card-title">Get Exclusive Fee Structures &amp; Offers</h3>
             <p class="must-visit__card-desc">Access transparent information and avail offers</p>
           </div>
-          
+
           <!-- Card 4 -->
-          <div class="must-visit__card" tabindex="0">
+          <div class="must-visit__card swiper-slide" tabindex="0">
             <img src="assets/icons/fi_1989875.png" alt="Offerings Icon" class="must-visit__card-icon">
             <h3 class="must-visit__card-title">Explore Schools Offerings</h3>
             <p class="must-visit__card-desc">Preview infrastructure, co-curricular, teaching methodology and culture</p>
           </div>
-          
+
           <!-- Card 5 -->
-          <div class="must-visit__card" tabindex="0">
+          <div class="must-visit__card swiper-slide" tabindex="0">
             <img src="assets/icons/Teacher.png" alt="Counselling Icon" class="must-visit__card-icon">
             <h3 class="must-visit__card-title">On-the-spot Counselling</h3>
-            <p class="must-visit__card-desc">Save time by getting direct support with your school search, applications, and immediate admission guidance</p>
+            <p class="must-visit__card-desc">Save time by getting direct support with your school search, applications,
+              and immediate admission guidance</p>
           </div>
-          
+
         </div>
       </div>
-      
+
       <!-- Slider Controls -->
       <div class="must-visit__controls">
-        <button class="must-visit__control-btn must-visit__control-btn--left" id="mv-btn-left" aria-label="Previous items">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <button class="must-visit__control-btn must-visit__control-btn--left" id="mv-btn-left"
+          aria-label="Previous items">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <button class="must-visit__control-btn must-visit__control-btn--right" id="mv-btn-right" aria-label="Next items">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <button class="must-visit__control-btn must-visit__control-btn--right" id="mv-btn-right"
+          aria-label="Next items">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </button>
       </div>
-      
+
     </section>
   </main>
 
-  <!-- Carousel Script -->
+  <!-- Swiper JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Initialization Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const grid = document.getElementById('must-visit-grid');
-      const leftBtn = document.getElementById('mv-btn-left');
-      const rightBtn = document.getElementById('mv-btn-right');
-      
-      if (grid && leftBtn && rightBtn) {
-        const getScrollAmount = () => {
-          // Dynamic scroll width: Card width (320px) + gap (30px) on desktop
-          const card = grid.querySelector('.must-visit__card');
-          if (card) {
-            const style = window.getComputedStyle(card);
-            const cardWidth = card.offsetWidth;
-            const gap = parseInt(window.getComputedStyle(grid).gap) || 30;
-            return cardWidth + gap;
+    (function () {
+      function initSwiperInstance() {
+        try {
+          if (typeof Swiper === 'undefined') {
+            console.warn("Swiper was not found. Attempting to load from fallback CDN...");
+            const script = document.createElement('script');
+            script.src = "https://unpkg.com/swiper@11/swiper-bundle.min.js";
+            script.onload = () => {
+              const link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = "https://unpkg.com/swiper@11/swiper-bundle.min.css";
+              document.head.appendChild(link);
+              setTimeout(createSwiper, 100);
+            };
+            script.onerror = () => {
+              console.error("Failed to load Swiper fallback CDN.");
+            };
+            document.body.appendChild(script);
+            return;
           }
-          return 350;
-        };
-        
-        leftBtn.addEventListener('click', () => {
-          grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        });
-        
-        rightBtn.addEventListener('click', () => {
-          grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        });
+          createSwiper();
+        } catch (e) {
+          console.error("Error during Swiper setup check:", e);
+        }
       }
-    });
+
+      function createSwiper() {
+        try {
+          const swiper = new Swiper('.must-visit__carousel', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: false,
+            speed: 700,
+            coverflowEffect: {
+              rotate: 10,
+              stretch: 10,
+              depth: 120,
+              modifier: 1,
+              slideShadows: true
+            },
+            navigation: {
+              nextEl: '#mv-btn-right',
+              prevEl: '#mv-btn-left',
+            },
+            keyboard: {
+              enabled: true,
+              onlyInViewport: true,
+            },
+            on: {
+              slideChange: function () {
+                // Subtle force repaint for smoother visual update
+                this.el.style.transform = 'translateZ(0)';
+              }
+            }
+          });
+          console.log("Swiper 3D Coverflow initialized successfully:", swiper);
+        } catch (error) {
+          console.error("Swiper 3D Coverflow initialization failed:", error);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSwiperInstance);
+      } else {
+        initSwiperInstance();
+      }
+    })();
   </script>
 
 </body>
