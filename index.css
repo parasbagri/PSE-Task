@@ -271,12 +271,12 @@ button:focus-visible,
 
 /* Scrolled state: logo scales down to fit inside compact bar */
 .header--scrolled .header__logo-link {
-  height: 52px;
+  height: 80px;
   align-self: center;
   overflow: hidden;
 }
 .header--scrolled .header__logo-img {
-  height: 52px;
+  height: 80px;
   width: auto;
 }
 
