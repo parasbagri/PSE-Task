@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premier Schools Exhibition - Discover top schools and design your child's future. Join the leading exhibition.">
+  <title>Premier Schools Exhibition (PSE) | Landing Page</title>
+
+  <!-- Google Fonts: Archivo (logos heading), Outfit (headings/buttons) & Inter (body/text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Skip-to-Content link for screen readers & keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Component -->
+  <header class="header">
+    <div class="header__container">
+      
+      <!-- Left Logo Link -->
+      <a href="/" class="header__logo-link" aria-label="Premier Schools Exhibition Home">
+        <img src="assets/Mask group.png" alt="Premier Schools Exhibition Logo" class="header__logo-img" width="201" height="157">
+      </a>
+      
+      <!-- Right Registration Button -->
+      <a href="#register" class="header__register-btn" aria-label="Register Now for the Exhibition">
+        <!-- Arrow Box: 60x60px -->
+        <span class="header__register-icon-box">
+          <svg class="header__register-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </span>
+        <!-- Text Box: 145x60px -->
+        <span class="header__register-text">Register Now</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero Section">
+      <div class="hero__container">
+        
+        <!-- Left Content Column -->
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__title-sub">Discover Gurugram's</span>
+            <span class="hero__title-main">Top 30+ Schools</span>
+            <span class="hero__title-tagline">ALL IN ONE PLACE</span>
+          </h1>
+          
+          <!-- Event Info Pill -->
+          <div class="hero__info-pill">
+            <div class="hero__info-item">
+              <span class="hero__info-title">Apparel House,</span>
+              <span class="hero__info-detail">Sec 44, Gurugram</span>
+            </div>
+            <div class="hero__info-divider" aria-hidden="true"></div>
+            <div class="hero__info-item">
+              <span class="hero__info-title">2-3 August 2025</span>
+              <span class="hero__info-detail">Sat-Sun | 10AM - 6PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Visual Column -->
+        <div class="hero__visual">
+          <div class="hero__visual-grid">
+            <!-- Oval Card 1 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=400&q=80" alt="Girl reading a book" class="hero__oval-img">
+            </div>
+            <!-- Oval Card 2 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80" alt="Children walking to school" class="hero__oval-img">
+            </div>
+            <!-- Oval Card 3 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80" alt="Boy playing soccer" class="hero__oval-img">
+            </div>
+            <!-- Oval Card 4 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=400&q=80" alt="Smiling school girl" class="hero__oval-img">
+            </div>
+            <!-- Oval Card 5 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80" alt="Smiling boy portrait" class="hero__oval-img">
+            </div>
+            <!-- Oval Card 6 -->
+            <div class="hero__oval-card">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80" alt="Girl holding golf club" class="hero__oval-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form Column -->
+        <div class="hero__form-container">
+          <h2 class="hero__form-title">Enquire Now</h2>
+          <form action="#" method="POST" class="hero__form">
+            
+            <div class="hero__form-group">
+              <label for="parent-name" class="sr-only">Parent's Name</label>
+              <input type="text" id="parent-name" name="parent-name" placeholder="Parent's Name" required class="hero__form-input">
+            </div>
+            
+            <div class="hero__form-group">
+              <label for="phone-number" class="sr-only">Phone number</label>
+              <input type="tel" id="phone-number" name="phone-number" placeholder="Phone number" required class="hero__form-input">
+            </div>
+            
+            <div class="hero__form-group">
+              <label for="grade" class="sr-only">Which grade are you looking for?</label>
+              <select id="grade" name="grade" required class="hero__form-select">
+                <option value="" disabled selected>Which grade are you looking for?</option>
+                <option value="kindergarten">Preschool / Kindergarten</option>
+                <option value="primary">Primary (Grades 1-5)</option>
+                <option value="middle">Middle School (Grades 6-8)</option>
+                <option value="high">High School (Grades 9-12)</option>
+              </select>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="hero__submit-btn" aria-label="Submit Enquiry Form">
+              <span class="hero__submit-icon-box">
+                <svg class="hero__submit-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+              <span class="hero__submit-text">Submit</span>
+            </button>
+            
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats" aria-label="Key Statistics">
+      <div class="stats__container">
+        
+        <!-- Stat Item 1 -->
+        <div class="stats__item">
+          <!-- Left Laurel -->
+          <svg class="stats__laurel" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+          
+          <div class="stats__text">
+            Trusted by<br><span class="stats__text--bold">1 Million+</span><br>Parents
+          </div>
+          
+          <!-- Right Laurel -->
+          <svg class="stats__laurel stats__laurel--right" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+        </div>
+
+        <!-- Stat Item 2 -->
+        <div class="stats__item">
+          <!-- Left Laurel -->
+          <svg class="stats__laurel" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+          
+          <div class="stats__text">
+            <span class="stats__text--bold">22+</span><br><span class="stats__text--bold">Years</span><br>of Legacy
+          </div>
+          
+          <!-- Right Laurel -->
+          <svg class="stats__laurel stats__laurel--right" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="stats__item">
+          <!-- Left Laurel -->
+          <svg class="stats__laurel" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+          
+          <div class="stats__text">
+            <span class="stats__text--bold">500+</span><br>Participating<br>Schools
+          </div>
+          
+          <!-- Right Laurel -->
+          <svg class="stats__laurel stats__laurel--right" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+        </div>
+
+        <!-- Stat Item 4 -->
+        <div class="stats__item">
+          <!-- Left Laurel -->
+          <svg class="stats__laurel" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+          
+          <div class="stats__text">
+            <span class="stats__text--bold">17 Cities</span><br>Across the<br>Globe
+          </div>
+          
+          <!-- Right Laurel -->
+          <svg class="stats__laurel stats__laurel--right" viewBox="0 0 80 150" aria-hidden="true">
+            <path d="M60,135 C50,110 40,80 40,50 C40,30 45,15 50,5" fill="none" stroke="#f6d3b0" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M50,5 C47,1 42,0 39,4 C36,8 41,13 46,14 C48,15 50,10 50,5 Z" fill="#f6d3b0" />
+            <path d="M42,20 C34,18 28,20 28,26 C28,32 35,33 40,30 C42,29 43,24 42,20 Z" fill="#f6d3b0" />
+            <path d="M38,45 C28,43 22,47 22,54 C22,61 30,62 36,58 C38,56 39,50 38,45 Z" fill="#f6d3b0" />
+            <path d="M37,70 C27,70 21,76 21,83 C21,90 29,90 35,85 C37,83 38,76 37,70 Z" fill="#f6d3b0" />
+            <path d="M39,95 C30,97 26,105 28,111 C30,117 38,115 42,109 C43,107 42,100 39,95 Z" fill="#f6d3b0" />
+            <path d="M44,118 C37,122 34,130 38,136 C42,141 49,137 51,130 C52,127 49,121 44,118 Z" fill="#f6d3b0" />
+            <path d="M47,25 C53,20 59,21 61,27 C63,33 57,37 51,35 C49,34 47,29 47,25 Z" fill="#f6d3b0" />
+            <path d="M44,50 C50,47 56,49 57,55 C58,61 51,64 46,61 C44,60 43,54 44,50 Z" fill="#f6d3b0" />
+            <path d="M42,75 C48,74 53,78 53,84 C53,90 47,92 42,88 C41,86 41,80 42,75 Z" fill="#f6d3b0" />
+            <path d="M42,98 C47,99 51,105 50,111 C49,117 42,117 38,111 C37,109 38,103 42,98 Z" fill="#f6d3b0" />
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Participating Schools Logos Section -->
+    <section class="logos" aria-labelledby="logos-title">
+      <h2 id="logos-title" class="logos__title">Participating Schools</h2>
+      
+      <div class="logos__marquee-wrapper">
+        
+        <!-- Top Row: Right to Left (moving left) -->
+        <marquee class="logos__marquee" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" aria-label="Participating Schools Row 1">
+          <div class="logos__track">
+            <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+          </div>
+        </marquee>
+        
+        <!-- Bottom Row: Left to Right (moving right) -->
+        <marquee class="logos__marquee" direction="right" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" aria-label="Participating Schools Row 2">
+          <div class="logos__track">
+            <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+            <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+          </div>
+        </marquee>
+        
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
