@@ -583,92 +583,7 @@ button:focus-visible,
   font-weight: 700;
 }
 
-/* ==========================================================================
-   Participating Schools Logos Styling
-   ========================================================================== */
 
-.logos {
-  width: 100%;
-  max-width: 1920px;
-  height: 362px;
-  margin: 0 auto;
-  padding: 40px 0;
-  background-color: var(--color-white);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(0, 14, 56, 0.05);
-  --marquee-dist: -1788px;
-}
-
-.logos__title {
-  font-family: 'Archivo', var(--font-heading);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 25px;
-  background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.logos__marquee-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  width: 100%;
-  /* overflow: hidden; */
-}
-
-.logos__marquee {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  user-select: none;
-  outline: none;
-}
-
-.logos__track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-}
-
-.logos__item {
-  width: 274px;
-  height: 120px;
-  background-color: var(--color-white);
-  border: 1.5px solid #eef0f6;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 30px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.logos__item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(63, 24, 106, 0.2);
-  box-shadow: 0 4px 12px rgba(63, 24, 106, 0.06);
-}
-
-.logos__img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-  pointer-events: none;
-}
 
 /* ==========================================================================
    Media Queries & Responsiveness
@@ -728,16 +643,7 @@ button:focus-visible,
     height: 80px;
   }
 
-  /* Logos Section Laptop Adjustments */
-  .logos {
-    height: auto;
-    padding: 30px 0;
-  }
 
-  .logos__title {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -794,22 +700,7 @@ button:focus-visible,
     min-width: 240px;
   }
 
-  /* Logos Section Tablet Adjustments */
-  .logos {
-    height: auto;
-    padding: 30px 0;
-  }
 
-  .logos__title {
-    font-size: 26px;
-    margin-bottom: 15px;
-  }
-
-  .logos__item {
-    width: 200px;
-    height: 90px;
-    padding: 10px 15px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -920,24 +811,7 @@ button:focus-visible,
     height: 65px;
   }
 
-  /* Logos Section Mobile Adjustments */
-  .logos__title {
-    font-size: 24px;
-  }
 
-  .logos__marquee-wrapper {
-    gap: 15px;
-  }
-
-  .logos__item {
-    width: 160px;
-    height: 75px;
-    padding: 8px 12px;
-  }
-
-  .logos__track {
-    gap: 16px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1010,25 +884,7 @@ button:focus-visible,
     justify-content: center;
   }
 
-  /* Logos Section Small Mobile Breakpoint */
-  .logos {
-    --marquee-dist: -852px;
-  }
 
-  .logos__title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .logos__item {
-    width: 130px;
-    height: 60px;
-    padding: 5px 8px;
-  }
-
-  .logos__track {
-    gap: 12px;
-  }
 }
 
 /* ==========================================================================

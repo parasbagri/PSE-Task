@@ -1,0 +1,192 @@
+/* ==========================================================================
+   Participating Schools Logos Section Stylesheet
+   ========================================================================== */
+
+.logos {
+  width: 100%;
+  max-width: 1920px;
+  height: 362px;
+  margin: 0 auto;
+  padding: 40px 0;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 14, 56, 0.05);
+}
+
+.logos__title {
+  font-family: 'Archivo', var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logos__marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+}
+
+.logos__marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  user-select: none;
+  outline: none;
+}
+
+.logos__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.logos__group {
+  display: flex;
+  gap: 24px;
+  padding-right: 24px;
+  flex-shrink: 0;
+}
+
+.logos__track--left {
+  animation: marquee-left 25s linear infinite !important;
+}
+
+.logos__track--right {
+  animation: marquee-right 25s linear infinite !important;
+}
+
+.logos__marquee:hover .logos__track,
+.logos__marquee:focus-within .logos__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logos__item {
+  width: 274px;
+  height: 120px;
+  background-color: var(--color-white);
+  border: 1.5px solid #eef0f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logos__item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(63, 24, 106, 0.2);
+  box-shadow: 0 4px 12px rgba(63, 24, 106, 0.06);
+}
+
+.logos__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .logos {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .logos__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logos {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .logos__title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .logos__item {
+    width: 200px;
+    height: 90px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos__title {
+    font-size: 24px;
+  }
+
+  .logos__marquee-wrapper {
+    gap: 15px;
+  }
+
+  .logos__item {
+    width: 160px;
+    height: 75px;
+    padding: 8px 12px;
+  }
+
+  .logos__group {
+    gap: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .logos__item {
+    width: 130px;
+    height: 60px;
+    padding: 5px 8px;
+  }
+
+  .logos__group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+}

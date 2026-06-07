@@ -12,11 +12,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Outfit:wght@600;700;800;900&display=swap"
     rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css?v=4">
+  <link rel="stylesheet" href="css/logos.css?v=2">
+  <link rel="stylesheet" href="css/choose-school.css?v=2">
 </head>
 
 <body>
@@ -328,35 +330,114 @@
     <!-- Participating Schools Logos Section -->
     <section class="logos" aria-labelledby="logos-title">
       <h2 id="logos-title" class="logos__title">Participating Schools</h2>
-
+      
       <div class="logos__marquee-wrapper">
-
+        
         <!-- Top Row: Right to Left (moving left) -->
-        <marquee class="logos__marquee" direction="left" scrollamount="6" onmouseover="this.stop();"
-          onmouseout="this.start();" aria-label="Participating Schools Row 1">
-          <div class="logos__track">
-            <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+        <div class="logos__marquee" tabindex="0" aria-label="Participating Schools Row 1">
+          <div class="logos__track logos__track--left">
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
           </div>
-        </marquee>
-
+        </div>
+        
         <!-- Bottom Row: Left to Right (moving right) -->
-        <marquee class="logos__marquee" direction="right" scrollamount="6" onmouseover="this.stop();"
-          onmouseout="this.start();" aria-label="Participating Schools Row 2">
-          <div class="logos__track">
-            <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
-            <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+        <div class="logos__marquee" tabindex="0" aria-label="Participating Schools Row 2">
+          <div class="logos__track logos__track--right">
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
+            <div class="logos__group">
+              <div class="logos__item"><img src="assets/s1.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s2.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s3.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s4.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s5.png" alt="School logo" class="logos__img"></div>
+              <div class="logos__item"><img src="assets/s6.png" alt="School logo" class="logos__img"></div>
+            </div>
           </div>
-        </marquee>
+        </div>
+        
+      </div>
+    </section>
 
+    <!-- Choose the School That Fits You Best Section -->
+    <section class="choose-school" aria-labelledby="choose-school-title">
+      <h2 id="choose-school-title" class="choose-school__title">Choose the School That Fits You Best</h2>
+      
+      <div class="choose-school__grid">
+        
+        <!-- Card 1 -->
+        <div class="choose-school__card" tabindex="0">
+          <img src="assets/choose-the-school/s1.png" alt="Pre-Schools & Early Learning Centres" class="choose-school__img">
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">Pre-Schools & Early Learning Centres</h3>
+            <p class="choose-school__card-desc">Nurturing foundational skills for toddlers and pre-primary children.</p>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="choose-school__card" tabindex="0">
+          <img src="assets/choose-the-school/s2.png" alt="K-12 CBSE Day Schools" class="choose-school__img">
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">K-12 CBSE Day Schools</h3>
+            <p class="choose-school__card-desc">Reputed schools offering complete schooling from Kindergarten to Grade 12.</p>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="choose-school__card" tabindex="0">
+          <img src="assets/choose-the-school/s3.png" alt="Heritage to New-Age Schools" class="choose-school__img">
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">Heritage to New-Age Schools</h3>
+            <p class="choose-school__card-desc">Time-tested schools to innovative pedagogy, tech enabled, future-ready schools</p>
+          </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="choose-school__card" tabindex="0">
+          <img src="assets/choose-the-school/s4.png" alt="International Curriculum Schools" class="choose-school__img">
+          <div class="choose-school__overlay">
+            <h3 class="choose-school__card-title">International Curriculum Schools</h3>
+            <p class="choose-school__card-desc">Offering IB, Cambridge, Finnish and other global curricula with a global learning environment.</p>
+          </div>
+        </div>
+        
       </div>
     </section>
   </main>
