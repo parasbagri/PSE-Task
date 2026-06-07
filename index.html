@@ -90,37 +90,75 @@
 
         <!-- Center Visual Column -->
         <div class="hero__visual">
-          <div class="hero__visual-grid">
-            <!-- Oval Card 1 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=400&q=80"
-                alt="Girl reading a book" class="hero__oval-img">
+          <div class="hero__visual-marquee">
+            
+            <div class="hero__visual-grid">
+              <!-- Oval Card 1 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=400&q=80"
+                  alt="Girl reading a book" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 2 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80"
+                  alt="Children walking to school" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 3 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80"
+                  alt="Boy playing soccer" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 4 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=400&q=80"
+                  alt="Smiling school girl" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 5 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80"
+                  alt="Smiling boy portrait" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 6 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80"
+                  alt="Girl holding golf club" class="hero__oval-img">
+              </div>
             </div>
-            <!-- Oval Card 2 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80"
-                alt="Children walking to school" class="hero__oval-img">
+
+            <!-- Duplicate visual grid for seamless infinite loop -->
+            <div class="hero__visual-grid" aria-hidden="true">
+              <!-- Oval Card 1 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=400&q=80"
+                  alt="Girl reading a book" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 2 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80"
+                  alt="Children walking to school" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 3 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80"
+                  alt="Boy playing soccer" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 4 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=400&q=80"
+                  alt="Smiling school girl" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 5 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80"
+                  alt="Smiling boy portrait" class="hero__oval-img">
+              </div>
+              <!-- Oval Card 6 -->
+              <div class="hero__oval-card">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80"
+                  alt="Girl holding golf club" class="hero__oval-img">
+              </div>
             </div>
-            <!-- Oval Card 3 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80"
-                alt="Boy playing soccer" class="hero__oval-img">
-            </div>
-            <!-- Oval Card 4 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=400&q=80"
-                alt="Smiling school girl" class="hero__oval-img">
-            </div>
-            <!-- Oval Card 5 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80"
-                alt="Smiling boy portrait" class="hero__oval-img">
-            </div>
-            <!-- Oval Card 6 -->
-            <div class="hero__oval-card">
-              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80"
-                alt="Girl holding golf club" class="hero__oval-img">
-            </div>
+
           </div>
         </div>
 
@@ -817,6 +855,51 @@
           header.classList.remove('header--scrolled', 'header--hidden');
         }
       }, { passive: true });
+    })();
+  </script>
+
+
+  <!-- Hero Visual Marquee Animation -->
+  <script>
+    (function () {
+      var marquee = document.querySelector('.hero__visual-marquee');
+      if (!marquee) return;
+
+      var firstGrid = marquee.querySelector('.hero__visual-grid');
+      if (!firstGrid) return;
+
+      var speed = 0.5; /* pixels per frame (~30px/sec at 60fps) */
+      var offset = 0;
+      var paused = false;
+      var rafId = null;
+
+      marquee.addEventListener('mouseenter', function () { paused = true; });
+      marquee.addEventListener('mouseleave', function () { paused = false; });
+
+      function animate() {
+        /* Only animate on wide screens (desktop) */
+        if (window.innerWidth <= 1280) {
+          marquee.style.transform = 'translateY(0)';
+          rafId = requestAnimationFrame(animate);
+          return;
+        }
+
+        if (!paused) {
+          offset -= speed;
+          /* scrollDistance = first grid height + gap (20px) */
+          var scrollDist = firstGrid.offsetHeight + 20;
+          if (Math.abs(offset) >= scrollDist) {
+            offset += scrollDist; /* snap back seamlessly */
+          }
+          marquee.style.transform = 'translateY(' + offset + 'px)';
+        }
+        rafId = requestAnimationFrame(animate);
+      }
+
+      /* Start after images load for correct height measurement */
+      window.addEventListener('load', function () {
+        animate();
+      });
     })();
   </script>
 

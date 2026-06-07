@@ -158,7 +158,7 @@ button:focus-visible,
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 14, 56, 0.08);
-  transition: var(--transition-smooth);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1.5px solid var(--color-border-dark);
 }
 
@@ -173,11 +173,29 @@ button:focus-visible,
   justify-content: center;
   color: var(--color-white);
   flex-shrink: 0;
-  transition: var(--transition-smooth);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .header__register-arrow {
-  transition: var(--transition-micro);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Prepare icon-box for pseudo-element arrow */
+.header__register-icon-box {
+  position: relative;
+}
+
+.header__register-icon-box::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Right Text Box: 145px x 60px */
@@ -196,22 +214,53 @@ button:focus-visible,
   text-transform: uppercase;
   letter-spacing: 0.8px;
   flex-shrink: 0;
-  transition: var(--transition-smooth);
+  transition: color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Right-to-left gradient fill overlay */
+.header__register-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #000E38 0%, #3F186A 100%);
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: -1;
 }
 
 /* Micro-interactions & Hovers */
 .header__register-btn:hover {
-  box-shadow: 0 8px 24px rgba(0, 14, 56, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 14, 56, 0.22);
   transform: translateY(-1px);
+  border-color: transparent;
 }
 
+.header__register-btn:hover .header__register-icon-box {
+  background: linear-gradient(270deg, #000E38 0%, #3F186A 100%);
+}
+
+/* Hide diagonal SVG arrow, show clean → */
 .header__register-btn:hover .header__register-arrow {
-  transform: translate(3px, -3px);
+  opacity: 0;
+}
+
+.header__register-btn:hover .header__register-icon-box::after {
+  opacity: 1;
+}
+
+/* Gradient slides in from right side */
+.header__register-btn:hover .header__register-text::before {
+  transform: translateX(0);
 }
 
 .header__register-btn:hover .header__register-text {
-  background-color: var(--color-bg-light);
-  color: var(--color-purple);
+  color: #ffffff;
 }
 
 /* Focus styles matching button boundary */
@@ -432,10 +481,18 @@ button:focus-visible,
   height: 100%;
   flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 10;
   overflow: hidden;
+}
+
+.hero__visual-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  will-change: transform;
 }
 
 .hero__visual-grid {
@@ -443,9 +500,9 @@ button:focus-visible,
   flex-wrap: wrap;
   gap: 20px 20px;
   width: 100%;
-  max-height: 680px;
   justify-content: center;
   align-content: center;
+  flex-shrink: 0;
 }
 
 /* Stagger middle column */
@@ -782,7 +839,13 @@ button:focus-visible,
 
   .hero__visual {
     width: 100%;
+    height: auto;
     padding: 10px 0;
+  }
+
+  /* Hide duplicate marquee grid on stacked layout — JS handles disabling */
+  .hero__visual-marquee .hero__visual-grid[aria-hidden="true"] {
+    display: none;
   }
 
   .hero__visual-grid {
