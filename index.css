@@ -48,6 +48,7 @@ html {
 
 body {
   overflow-x: hidden;
+  padding-top: 100px; /* offset for fixed header */
 }
 
 /* Keyboard Accessibility Focus styles (WCAG 2.2 AA) */
@@ -83,15 +84,34 @@ button:focus-visible,
    ========================================================================== */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
   background-color: var(--color-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   z-index: 1000;
   overflow: visible;
-  /* Allows the logo to hang below 100px */
+  transform: translateY(0);
+  transition: background 0.4s ease,
+              box-shadow 0.4s ease,
+              height 0.4s ease,
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll DOWN → header slides off-screen upward */
+.header--hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+/* Scroll UP (after leaving top) → header reappears with dark gradient */
+.header--scrolled {
+  background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+  height: 112px;
+  overflow: hidden;
 }
 
 .header__container {
@@ -199,6 +219,64 @@ button:focus-visible,
   outline: 3px solid var(--color-focus-ring);
   outline-offset: 2px;
 }
+
+/* Scrolled state: logo scales down to fit inside compact bar */
+.header--scrolled .header__logo-link {
+  height: 52px;
+  align-self: center;
+  overflow: hidden;
+}
+.header--scrolled .header__logo-img {
+  height: 52px;
+  width: auto;
+}
+
+/* Scrolled state: Register Now → clean white button, arrow on the RIGHT */
+.header--scrolled .header__register-btn {
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border: none !important;
+}
+
+/* Hide the left gradient arrow-box in scrolled state */
+.header--scrolled .header__register-icon-box {
+  display: none;
+}
+
+/* Text area becomes the full white button */
+.header--scrolled .header__register-text {
+  background-color: #ffffff;
+  color: #000E38;
+  font-weight: 700;
+  width: auto;
+  padding: 0 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+}
+
+/* Arrow → on the right using pseudo-element */
+.header--scrolled .header__register-text::after {
+  content: '→';
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  border: none !important;
+}
+
+.header--scrolled .header__register-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.header--scrolled .header__register-btn:hover .header__register-text::after {
+  transform: translateX(3px);
+}
+
 
 /* ==========================================================================
    Hero Section Styling
