@@ -12,15 +12,17 @@
 
 .site-footer__container {
   width: 100%;
-  max-width: 1406px;
+  max-width: 1571px;
   margin: 0 auto;
-  padding: 0 40px;
+  /* padding: 0 40px; */
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 /* ── Logo ── */
@@ -44,6 +46,7 @@
   gap: 14px;
   flex: 1 1 200px;
   min-width: 0;
+  place-self: flex-start;
 }
 
 /* ── Location-pin icon box ── */
@@ -51,7 +54,9 @@
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
+  /* background: rgba(255, 255, 255, 0.12); */
+  background: linear-gradient(59.05deg, #DDBFFF 0.39%, #EDDDFF 93.5%);
+     border: 2px solid #7557;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,8 +66,9 @@
 .site-footer__icon-box svg {
   width: 22px;
   height: 22px;
-  color: #ffffff;
-  stroke: currentColor;
+  /* color: #ffffff;
+  stroke: currentColor; */
+  color:#3F186A;
 }
 
 /* ── Column text block ── */
@@ -113,7 +119,8 @@
 
 /* ── Phone icon box ── */
 .site-footer__icon-box--phone {
-  background: rgba(255, 255, 255, 0.12);
+  /* background: rgba(255, 255, 255, 0.12); */
+
 }
 
 /* ── Social media column ── */
@@ -128,7 +135,9 @@
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.12);
+  /* background: rgba(255, 255, 255, 0.12); */
+  background: linear-gradient(59.05deg, #DDBFFF 0.39%, #EDDDFF 93.5%);
+     border: 2px solid #7557;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +154,9 @@
 .site-footer__social-link svg {
   width: 20px;
   height: 20px;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color:#3F186A;
+
   stroke: currentColor;
   fill: none;
 }
@@ -203,6 +214,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 18px 40px;
   box-sizing: border-box;
+  background: #fff ;
+  color: #000E38 !important;
 }
 
 .site-footer__copyright-text {
@@ -213,7 +226,8 @@
   line-height: 1.5;
   letter-spacing: 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.65);
+  /* color: rgba(255, 255, 255, 0.65); */
+  color: #000E38;
   margin: 0;
 }
 

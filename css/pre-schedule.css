@@ -25,7 +25,7 @@
 
 .pre-schedule__content {
   width: 100%;
-  max-width: 587px; /* Half of 1174px container */
+  max-width: 641px; /* Half of 1174px container */
   padding-right: 60px;
   padding-left: 20px;
   box-sizing: border-box;
@@ -51,7 +51,7 @@
   font-family: 'FONTSPRING DEMO - Museo Sans 500', 'Outfit', var(--font-heading);
   font-weight: 600; /* Styled bold to match mockup */
   font-style: normal;
-  font-size: 64px;
+  font-size: 58px;
   line-height: 1.3;
   letter-spacing: 0;
   background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);

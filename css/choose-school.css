@@ -113,6 +113,21 @@
   }
 }
 
+@media (max-width: 1680px) {
+  .choose-school__grid {
+    gap: 30px;
+  }
+  
+  .choose-school__card {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 420 / 405;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+}
+
 @media (max-width: 1400px) {
   .choose-school__grid {
     height: auto;
